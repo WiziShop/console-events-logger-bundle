@@ -1,0 +1,27 @@
+{
+    "name": "gs/console-events-logger-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Bruno Nicolle",
+            "email": "bruno@wizishop.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "WiziShop\\ConsoleEventsLoggerBundle": "" }
+    },
+    "target-dir": "WiziShop/ConsoleEventsLoggerBundle",
+    "require": {
+        "php": ">=5.3.2",
+        "threadmeup/slack-sdk": "^1.1",
+        "symfony/console": "^4.0"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}
