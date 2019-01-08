@@ -12,7 +12,8 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3.2",
-        "threadmeup/slack-sdk": "^1.1"
+        "threadmeup/slack-sdk": "^1.1",
+        "symfony/console": "^4.0"
     },
     "autoload": {
         "psr-0": {
