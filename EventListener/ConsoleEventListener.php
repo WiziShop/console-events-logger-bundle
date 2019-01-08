@@ -33,7 +33,7 @@ class ConsoleEventListener implements EventSubscriberInterface
         return [
             ConsoleEvents::COMMAND => 'command',
             ConsoleEvents::TERMINATE => 'terminate',
-            ConsoleEvents::EXCEPTION => 'error'
+            ConsoleEvents::EXCEPTION => 'exception'
         ];
     }
 
@@ -72,14 +72,14 @@ class ConsoleEventListener implements EventSubscriberInterface
     /**
      * @param ConsoleExceptionEvent $event
      */
-    public function error(ConsoleExceptionEvent $event)
+    public function exception(ConsoleExceptionEvent $event)
     {
         $this->logger->log(
             sprintf(
                 ':fire: :no_entry_sign: :fire: `%s` => *%s* execution is stopped ! :fire: :no_entry_sign: :fire: ```%s```',
                 $this->getNewDate(),
                 $this->getCommandDescription($event),
-                $event->getError()->getMessage()
+                $event->getException()->getMessage()
             )
         );
     }
