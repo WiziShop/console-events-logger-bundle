@@ -11,7 +11,7 @@
     <services>
         <service id="hcel.event_listener.console" class="%hcel.event_listener.console.class%">
             <argument type="service" id="hcel.logger" />
-            <argument>%wizishop_console_events_logger%</argument>
+            <argument>%wizi_shop_console_events_logger%</argument>
             <tag name="kernel.event_subscriber" />
         </service>
     </services>

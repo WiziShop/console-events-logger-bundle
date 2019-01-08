@@ -11,7 +11,7 @@
     <services>
         <service id="hcel.logger" class="%hcel.logger.class%">
             <argument>%kernel.environment%</argument>
-            <argument>%wizishop_console_events_logger%</argument>
+            <argument>%wizi_shop_console_events_logger%</argument>
         </service>
     </services>
 </container>
