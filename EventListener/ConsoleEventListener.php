@@ -89,7 +89,9 @@ class ConsoleEventListener implements EventSubscriberInterface
      */
     private function getNewDate()
     {
-        return (new \DateTime('now'))->format('Y-m-d H:i:s');
+        $date = (new \DateTime('now'))->format('Y-m-d H:i:s');
+
+        return $date;
     }
 
     /**
