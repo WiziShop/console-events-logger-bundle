@@ -6,7 +6,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\Console\Event\ConsoleTerminateEvent;
 use Symfony\Component\Console\ConsoleEvents;
-use Symfony\Component\Console\Event\ConsoleErrorEvent;
+use Symfony\Component\Console\Event\ConsoleExceptionEvent;
 
 use WiziShop\ConsoleEventsLoggerBundle\Logger\Logger;
 
@@ -33,7 +33,7 @@ class ConsoleEventListener implements EventSubscriberInterface
         return [
             ConsoleEvents::COMMAND => 'command',
             ConsoleEvents::TERMINATE => 'terminate',
-            ConsoleEvents::ERROR => 'error'
+            ConsoleEvents::EXCEPTION => 'error'
         ];
     }
 
@@ -70,9 +70,9 @@ class ConsoleEventListener implements EventSubscriberInterface
     }
 
     /**
-     * @param ConsoleErrorEvent $event
+     * @param ConsoleExceptionEvent $event
      */
-    public function error(ConsoleErrorEvent $event)
+    public function error(ConsoleExceptionEvent $event)
     {
         $this->logger->log(
             sprintf(

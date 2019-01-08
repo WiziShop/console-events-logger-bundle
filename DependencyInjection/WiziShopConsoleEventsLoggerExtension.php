@@ -27,6 +27,6 @@ class WiziShopConsoleEventsLoggerExtension extends Extension
         $loader->load('services/event_listener.xml');
         $loader->load('services/logger.xml');
 
-        $container->setParameter('wizishop_console_events_logger', $config);
+        $container->setParameter('wizi_shop_console_events_logger', $config);
     }
 }

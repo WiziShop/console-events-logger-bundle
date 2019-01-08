@@ -20,7 +20,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('wizishop_console_events_logger');
+        $rootNode = $treeBuilder->root('wizi_shop_console_events_logger');
 
         $rootNode
             ->children()
